@@ -1,0 +1,38 @@
+.footer{
+  background-color: $color--main;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .contentWrapper{
+    width:100%;
+    max-width: 950px !important;
+    display: block;
+  }
+  
+}
+
+
+.footer__left{
+  .footer__address{}
+  .footer__contact{}
+}
+
+.footer__right{    
+  .footer__ouverture{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  grid-template-rows:1fr 1fr;
+    .ouverture__day{}
+    .ouverture__time{
+      text-align: right;
+    }
+  }
+}
+.footer__last{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  .footer__copyright{}
+  .footer__socialmedia{}
+}

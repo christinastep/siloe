@@ -1,0 +1,28 @@
+.quote{
+  .contentWrapper{
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .quote__text{
+    font-size: 28px;
+    text-align: center;
+  }
+  .quote__legende{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    .quote__legende__image{
+      width:32px;
+      margin-right: 10px;
+      height:32px;
+      border-radius: 50%;
+      background-color: grey;
+    }
+    .quote__legende__name{
+      font-size: 12px;
+    }
+  }
+}

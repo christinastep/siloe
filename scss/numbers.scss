@@ -1,0 +1,26 @@
+.numbers{
+  background-color: $color--main;
+  .contentWrapper{
+    justify-content: space-between;
+    width:100%;
+    max-width: 780px;
+  }
+  h2{
+    color: #fff;
+    &:after{
+      background-color: #fff;
+    }
+  }
+
+  .number__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    .number__box__number{
+      font-size: 50px;
+    }
+    .number__box__legende{}
+  }
+}

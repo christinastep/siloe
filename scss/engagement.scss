@@ -1,0 +1,30 @@
+.engagement{
+  background-color: $color--secondary;
+  .contentWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .engagement__box{
+    display: flex;
+    margin-bottom: 40px;
+    .engagement__imageBox{
+      width:30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .engagement__textBox{
+      width: 70%;
+      .engagement__textBox__headline{
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .engagement__textBox__text{
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
