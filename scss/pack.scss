@@ -10,6 +10,10 @@
     margin-bottom: 40px;
     max-width: 600px;
     text-align: center;
+    @include max-sx{
+      font-size: 16px;
+      width:80%;
+    }
   }
   .contentWrapper{
     max-width: 950px;
@@ -19,6 +23,11 @@
     width:32%;
     background-color: $color--secondary;
     border-radius: 10px;
+    @include max-sx{
+      width:80%;
+      margin-left:10%;
+      margin-bottom: 40px;
+    }
     
     text-align: center;
     .pack__box__intro{
@@ -31,7 +40,7 @@
       .pack__box__headline{
         font-size: 24px;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
       .pack__box__text{
         font-size: 16px;

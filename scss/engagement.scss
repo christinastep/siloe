@@ -8,22 +8,35 @@
   .engagement__box{
     display: flex;
     margin-bottom: 40px;
+    @include max-sx{
+      width:90%;
+      justify-content: space-between;
+    }
     .engagement__imageBox{
-      width:30%;
+      width:20%;
       display: flex;
       justify-content: center;
       align-items: center;
+      
     }
     .engagement__textBox{
-      width: 70%;
+      width: 75%;
       .engagement__textBox__headline{
         font-size: 28px;
         font-weight: bold;
+        line-height: 1.1em;
         margin-bottom: 5px;
+        @include max-sx{
+          font-size:20px;
+          hyphens: auto;
+          
+        }
       }
       .engagement__textBox__text{
         font-size: 16px;
         line-height: 20px;
+        hyphens: auto;
+       
       }
     }
   }

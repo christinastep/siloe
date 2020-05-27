@@ -28,10 +28,20 @@
       font-weight: bold;
       font-size: 50px;
       text-transform: uppercase;
+      margin-bottom: 23px;
+      @include max-sx{
+        font-size: 40px;
+        
+      }
     }
     .intro__text__subheadline{
       font-size: 25px;
       font-weight: normal;
+      @include max-sx{
+        font-size: 20px;
+        width: 70vw;
+        line-height: 1.2em;
+      }
     }
   }
 }

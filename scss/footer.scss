@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
   .contentWrapper{
     width:100%;
     max-width: 950px !important;
@@ -14,11 +16,21 @@
 
 
 .footer__left{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  @include max-sx{
+    margin-bottom: 20px;
+  }
   .footer__address{}
   .footer__contact{}
 }
 
-.footer__right{    
+.footer__right{  
+  margin-top: 20px;  
+  margin-bottom: 40px;
+  @include max-sx{
+    margin-bottom: 20px;
+  }
   .footer__ouverture{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -30,9 +42,17 @@
   }
 }
 .footer__last{
-  display: flex;
+  
+  display: flex !important;
   width:100%;
   justify-content: space-between;
-  .footer__copyright{}
-  .footer__socialmedia{}
+  margin-top: 40px;
+  
 }
+
+.footer__copyright{
+  @include max-sx{
+    font-size: 12px;
+  }
+}
+.footer__socialmedia{}
