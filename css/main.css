@@ -56,7 +56,8 @@ a {
   transition: all 0.3s; }
   .header a {
     color: #fff;
-    margin-left: 8px; }
+    margin-left: 8px;
+    cursor: pointer; }
 
 .intro {
   height: 100vh;
@@ -82,12 +83,6 @@ a {
     transform: translateY(-100vh);
     color: #fff;
     text-align: center; }
-
-@keyframes introTextFadeIn {
-  0% {
-    transform: translateY(-100vh); }
-  100% {
-    transform: translateY(0vh); } }
     .intro .intro__text .intro__text__headline {
       font-weight: bold;
       font-size: 50px;
@@ -104,6 +99,35 @@ a {
           font-size: 20px;
           width: 70vw;
           line-height: 1.2em; } }
+
+@keyframes introTextFadeIn {
+  0% {
+    transform: translateY(-100vh); }
+  100% {
+    transform: translateY(0vh); } }
+
+.button--newsletter {
+  position: fixed;
+  right: 50px;
+  background-color: #262B35;
+  border: solid 3px #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30vw;
+  color: #fff;
+  bottom: 50px;
+  z-index: 10;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30vw;
+  animation: introTextFadeIn 0.8s forwards;
+  transform: translateY(-100vh); }
+
+@media (max-width: 599px) {
+  .newsletter--intro {
+    display: none; } }
 
 .quote .contentWrapper {
   max-width: 750px;
@@ -222,15 +246,6 @@ a {
   align-items: center; }
   .packs h2 {
     margin-bottom: 30px; }
-  .packs .section__intro {
-    font-size: 20px;
-    margin-bottom: 40px;
-    max-width: 600px;
-    text-align: center; }
-    @media (max-width: 599px) {
-      .packs .section__intro {
-        font-size: 16px;
-        width: 80%; } }
   .packs .contentWrapper {
     max-width: 950px;
     align-items: stretch; }
@@ -275,6 +290,209 @@ a {
           left: 50%;
           transform: translateX(-50%); }
 
+.recrute h2 {
+  margin-bottom: 30px; }
+
+.recrute .contentWrapper {
+  width: 100%;
+  max-width: 950px;
+  flex-wrap: wrap; }
+
+.recrute .recrute__box {
+  width: 23%;
+  background-color: #262B35;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px; }
+  @media (max-width: 599px) {
+    .recrute .recrute__box {
+      width: 60%; } }
+  .recrute .recrute__box:hover {
+    cursor: pointer;
+    background-color: #D7E4EE;
+    color: #D7E4EE;
+    position: relative; }
+    .recrute .recrute__box:hover:after {
+      content: "Postulez";
+      display: block;
+      position: absolute;
+      font-weight: bold;
+      color: #262B35;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      left: 50%;
+      border: solid 2px #262B35;
+      padding: 5px 10px;
+      border-radius: 10px; }
+
+.contact {
+  position: fixed;
+  width: 90vw;
+  min-height: 100vh;
+  background-color: #262B35;
+  color: #fff;
+  z-index: 11;
+  top: 0vh;
+  right: 0vw;
+  transition: all 0.7s;
+  transform: translateY(-100%);
+  padding-top: 10vh;
+  overflow: scroll; }
+  @media (max-width: 599px) {
+    .contact {
+      width: 100%;
+      padding-top: 0; } }
+  .contact a {
+    color: #fff;
+    margin-bottom: 20px;
+    display: block; }
+  .contact h2:after {
+    background-color: #fff; }
+  .contact .contentWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 950px; }
+    @media (max-width: 599px) {
+      .contact .contentWrapper {
+        display: block;
+        height: 100vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        overflow-y: scroll; } }
+
+button:focus {
+  outline: none; }
+
+.button--close {
+  position: absolute;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  border-radius: 50%; }
+  @media (max-width: 599px) {
+    .button--close {
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      border: solid 2px #fff;
+      background-color: #262B35;
+      position: absolute;
+      z-index: 10; } }
+  .button--close:after, .button--close:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: #fff;
+    top: calc(50% - 15px);
+    left: 50%;
+    transform-origin: center; }
+    @media (max-width: 599px) {
+      .button--close:after, .button--close:before {
+        height: 20px;
+        top: calc(50% - 10px);
+        left: 45%; } }
+  .button--close:after {
+    transform: rotate(135deg); }
+  .button--close:before {
+    transform: rotate(45deg); }
+
+.button--contact {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: solid 3px #262B35;
+  color: #262B35;
+  cursor: pointer; }
+  .button--contact:hover {
+    background-color: #262B35;
+    color: #fff; }
+
+.contact--wrapper {
+  margin-top: 30px; }
+  .contact--wrapper .contact--mail {
+    width: 65%;
+    position: relative; }
+    @media (max-width: 599px) {
+      .contact--wrapper .contact--mail {
+        width: 100%;
+        padding-bottom: 50px;
+        margin-bottom: 50px; } }
+    .contact--wrapper .contact--mail:after {
+      position: absolute;
+      content: "";
+      height: 50%;
+      background-repeat: 3vw;
+      top: 0;
+      width: 3px;
+      background-color: #fff;
+      display: block;
+      right: 0%; }
+      @media (max-width: 599px) {
+        .contact--wrapper .contact--mail:after {
+          width: 50%;
+          height: 1px;
+          bottom: 0;
+          top: auto;
+          right: 25%; } }
+    .contact--wrapper .contact--mail form {
+      width: 90%; }
+      @media (max-width: 599px) {
+        .contact--wrapper .contact--mail form {
+          width: 100%; } }
+      .contact--wrapper .contact--mail form input, .contact--wrapper .contact--mail form textarea {
+        width: 100%;
+        background-color: transparent;
+        border: solid 1px #fff;
+        font-size: 17px;
+        color: #fff;
+        padding: 5px; }
+        .contact--wrapper .contact--mail form input:focus, .contact--wrapper .contact--mail form textarea:focus {
+          background-color: #fff;
+          color: #262B35; }
+      .contact--wrapper .contact--mail form ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #fff; }
+      .contact--wrapper .contact--mail form ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #fff; }
+      .contact--wrapper .contact--mail form :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #fff; }
+      .contact--wrapper .contact--mail form :-moz-placeholder {
+        /* Firefox 18- */
+        color: #fff; }
+      .contact--wrapper .contact--mail form .button--sumbit {
+        width: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        background-color: #262B35;
+        border: solid 3px #fff;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 30vw;
+        color: #fff;
+        bottom: 50px;
+        margin-top: 20px; }
+  .contact--wrapper .contact--telephone {
+    width: 30%; }
+    @media (max-width: 599px) {
+      .contact--wrapper .contact--telephone {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contact--wrapper .contact--telephone .footer__ouverture {
+          text-align: left;
+          width: 80%; } }
+
 .footer {
   background-color: #262B35;
   color: #fff;
@@ -301,18 +519,22 @@ a {
   @media (max-width: 599px) {
     .footer__right {
       margin-bottom: 20px; } }
-  .footer__right .footer__ouverture {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr; }
-    .footer__right .footer__ouverture .ouverture__time {
-      text-align: right; }
 
 .footer__last {
   display: flex !important;
   width: 100%;
   justify-content: space-between;
   margin-top: 40px; }
+
+.footer a {
+  color: #ffffff; }
+
+.footer__ouverture {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr; }
+  .footer__ouverture .ouverture__time {
+    text-align: right; }
 
 @media (max-width: 599px) {
   .footer__copyright {
@@ -374,3 +596,13 @@ h2 {
       width: 80vw; }
       h2:after {
         width: 50%; } }
+
+.section__intro {
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  text-align: center; }
+  @media (max-width: 599px) {
+    .section__intro {
+      font-size: 16px;
+      width: 80%; } }

@@ -10,6 +10,54 @@
   
 </head>
 <body>
+  <section class="contact">
+    <div class="contentWrapper">
+      <button class="button--close"></button>
+      <h2>Contactez nous</h2>
+      <p>Des doutes ? Des questions ? Venez nous rencontrer dès aujourd’hui !</p>
+      <div class="box--flex contact--wrapper">
+        <div class="contact--mail">
+          <form action="/action_page.php">
+
+            <!-- <label for="fname">Nom:</label><br> -->
+            <input type="text" id="fname" name="fname" placeholder="Nom"><br><br>
+
+            <!-- <label for="lname">Tel:</label><br> -->
+            <input type="text" id="lname" name="lname" placeholder="Nummero Telphone"><br><br>
+
+            <!-- <label for="lname">Mail:</label><br> -->
+            <input type="text" id="lname" name="lname" placeholder="Mail"><br><br>
+
+            <!-- <label for="lname">Objective:</label><br> -->
+            <input type="text" id="lname" name="lname" placeholder="Objective"><br><br>
+
+            <!-- <label for="lname">Message:</label><br> -->
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" class="button--sumbit" value="Envoyer">
+          </form> 
+        </div>
+
+        <div class="contact--telephone">
+          <p>Ou apelle nous directement</p><br>
+          <p><a href="tel:1234567890">Tel: 01234 4789</a></p><br>
+          <div class="footer__ouverture">
+            <p class="ouverture__day">Lundi</p>
+            <p class="ouverture__time">8h30 - 18h00</p>
+            <p class="ouverture__day">Mardi</p>
+            <p class="ouverture__time">8h30 - 18h00</p>
+            <p class="ouverture__day">Mercredi</p>
+            <p class="ouverture__time">8h30 - 18h00</p>
+            <p class="ouverture__day">Jeudi</p>
+            <p class="ouverture__time">8h30 - 18h00</p>
+            <p class="ouverture__day">Vendredi </p>
+            <p class="ouverture__time">8h30 - 17h00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
   <header class="header">
     <svg class="header__logo" width="49" height="27" viewBox="0 0 49 27" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M47 1.7305H18V25.1025H47V1.7305Z" stroke-width="3" stroke-miterlimit="10"/>
@@ -18,18 +66,21 @@
     <nav>
       <a href="#boite">Boite</a>
       <a href="#pack">Pack</a>
-      <a href="#contact">Contact</a>
+      <a href="#jobs">Jobs</a>
+      <a  data-contact="open">Contact</a>
     </nav>  
   </header>
 
-  <section class="section__intro intro" data-logo="intro">
+  <button class="button--newsletter newsletter--intro">Newsletter</button>
+
+  <section class="section__introo intro" data-logo="intro">
     <div class="intro__text">
       <h1 class="intro__text__headline">Siloë AVM</h1>
       <p class="intro__text__subheadline">Un cabinet à votre écoute et à votre cote</p>
     </div>
   </section>
 
-  <section class="section__quote quote" data-logo="main">
+  <section class="section__quote quote" data-logo="main" id="boite">
     <div class="contentWrapper">
       <div class="quote__text">
         “Nos équipes vous accompagnent au cours des étapes clés de la vie de votre entreprise contribuant à simplifier et sécuriser la gestion de votre activité.”
@@ -210,7 +261,7 @@
         </div>
     </div>
   </section>
-  <section class="section__packs packs" data-logo="dark">
+  <section class="section__packs packs" data-logo="dark" id="pack">
     <h2>Nos Package</h2>
     <p class="section__intro">Vous aidez à construire, tout en ayant les bons conseils pour vous guider dans vos projets</p>
     <div class="contentWrapper">
@@ -258,6 +309,46 @@
         </div>
       </div>
     </div>
+    <button class="button--contact" data-contact="open">Contactez nous</button>
+  </section>
+
+  <section class="section__recrute recrute" data-logo="light" id="jobs">
+    <h2>Jobs</h2>
+    <p class="section__intro">Vous voulez nous rejoindre ? Voici nos dernières offres d’emplois.</p>
+    <div class="contentWrapper">
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>CDD: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>CDD: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>Stage: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>Stage: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>CDD: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>CDD: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>Stage: 3 mois</p>
+      </div>
+      <div class="recrute__box" data-contact="open">
+        <h3>Archivist</h3>
+        <p>Stage: 3 mois</p>
+      </div>
+    </div>
   </section>
 
   <footer class="footer" data-logo="light">
@@ -274,8 +365,8 @@
             44300 Nantes</p>
           </div>
           <div class="footer__contact">
-            02 51 83 19 02<br>
-            info@siloe.fr
+            <a href="tel:1234567890">Tel: 01234 4789</a><br>
+            <a href="mailto:info@siloe.fr">info@siloe.fr</a>      
           </div>  
         </div>
         <div class="footer__right">

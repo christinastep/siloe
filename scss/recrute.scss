@@ -1,0 +1,41 @@
+.recrute{
+  h2{
+    margin-bottom: 30px;
+  }
+  .contentWrapper{
+    width: 100%;
+    max-width: 950px;
+    flex-wrap: wrap;
+  }
+  .recrute__box{
+    width:23%;
+    @include max-sx{
+      width:60%;
+    }
+    background-color: $color--main;
+    color:#fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    &:hover{
+      cursor: pointer;
+      background-color: $color--secondary;
+      //color: $color--main;
+      color: $color--secondary;
+      position: relative;
+      &:after{
+        content: "Postulez";
+        display: block;
+        position: absolute;
+        font-weight: bold;
+        color: $color--main;
+        top:50%;
+        transform: translateX(-50%) translateY(-50%);
+        left:50%;
+        border: solid 2px $color--main;
+        padding: 5px 10px;
+        border-radius: 10px;
+        
+      }
+    }
+  }
+}

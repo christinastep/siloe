@@ -5,16 +5,7 @@
   h2{
     margin-bottom: 30px;
   }
-  .section__intro{
-    font-size: 20px;
-    margin-bottom: 40px;
-    max-width: 600px;
-    text-align: center;
-    @include max-sx{
-      font-size: 16px;
-      width:80%;
-    }
-  }
+  
   .contentWrapper{
     max-width: 950px;
     align-items: stretch;

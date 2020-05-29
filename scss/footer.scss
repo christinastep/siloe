@@ -31,15 +31,7 @@
   @include max-sx{
     margin-bottom: 20px;
   }
-  .footer__ouverture{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  grid-template-rows:1fr 1fr;
-    .ouverture__day{}
-    .ouverture__time{
-      text-align: right;
-    }
-  }
+  
 }
 .footer__last{
   
@@ -48,6 +40,22 @@
   justify-content: space-between;
   margin-top: 40px;
   
+}
+
+.footer{
+  a{
+    color: #ffffff;
+  }
+}
+
+.footer__ouverture{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+grid-template-rows:1fr 1fr;
+  .ouverture__day{}
+  .ouverture__time{
+    text-align: right;
+  }
 }
 
 .footer__copyright{

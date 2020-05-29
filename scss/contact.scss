@@ -1,0 +1,204 @@
+.contact{
+  position: fixed;
+  width:90vw;
+  min-height:100vh;
+  background-color: $color--main;
+  color:#fff;
+  z-index: 11;
+  top:0vh;
+  right:0vw;
+  transition: all 0.7s;
+  transform: translateY(-100%);
+  padding-top: 10vh;
+  overflow: scroll;
+  @include max-sx{
+    width: 100%;  
+    padding-top: 0;
+  }
+
+  a{
+    color:#fff;
+    margin-bottom: 20px;
+    display: block;
+  }
+  h2{
+    &:after{
+      background-color: #fff;
+      // @include max-sx{
+      //   display: none; 
+      // }
+    }
+  }
+  .contentWrapper{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 950px;
+    @include max-sx{
+      display: block;
+      height: 100vh;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      overflow-y: scroll;
+    }
+  }
+}
+
+button{
+  &:focus{
+    outline: none;
+  }
+}
+
+
+
+.button--close{
+  position: absolute;
+  bottom:50px;
+  width:50px;
+  height:50px;
+  right:50px;
+  
+  @include max-sx{
+    
+    top:20px;
+    right:20px;
+    width: 30px;
+    height:30px;
+    border: solid 2px #fff;
+    background-color: $color--main;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  border-radius: 50%;
+  &:after,&:before{
+    content:"";
+    position: absolute;
+    width:2px;
+    height:30px;
+    @include max-sx{
+      height:20px;
+      top:calc(50% - 10px);
+      left:45%;
+    }
+    background-color: #fff;
+    top:calc(50% - 15px);
+    left:50%;
+    transform-origin: center;
+  }
+  &:after{
+    transform: rotate(135deg)
+  }
+  &:before{
+    transform: rotate(45deg)
+  }
+}
+
+.button--contact{
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  padding:10px 20px;
+  border-radius: 20px;
+  border: solid 3px $color--main;
+  color:$color--main;
+  cursor: pointer;
+  &:hover{
+    background-color: $color--main;
+    color: #fff;
+  }
+}
+
+.contact--wrapper{
+  margin-top: 30px;
+  .contact--mail{
+    width:65%;
+    @include max-sx{
+      width: 100%; 
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+    }
+    position: relative;
+    &:after{
+      position: absolute;
+      content:"";
+      height:50%;
+      background-repeat: 3vw;
+      top:0;
+      width:3px;
+      background-color: #fff;
+      display: block;
+      right: 0%;
+      @include max-sx{
+        width: 50%;
+        height: 1px;
+        bottom: 0;
+        top: auto;
+        right:25%;
+      }
+      //transform: translateX(-50%)
+    }
+    form{
+      width:90%;
+      @include max-sx{
+        width: 100%; 
+      }
+
+      input,textarea{
+        width: 100%;
+        background-color: transparent;
+        border:solid 1px #fff;
+        font-size: 17px;
+        color: #fff;
+        padding:5px;
+        &:focus{
+          background-color: #fff;
+          color: $color--main;
+        }
+      }
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #fff;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #fff;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #fff;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #fff;
+      }
+      .button--sumbit{
+        width: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        background-color: $color--main;
+        border: solid 3px #fff;
+        font-weight: bold;
+        font-size: 16px;
+        padding:10px 20px;
+        border-radius: 30vw;
+        color: #fff;
+        bottom: 50px;
+        margin-top: 20px;
+      }
+    }
+  }
+  
+  .contact--telephone{
+    width: 30%;
+    @include max-sx{
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .footer__ouverture{
+        text-align: left;
+        width: 80%;
+      }
+    }
+  }
+}

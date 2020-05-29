@@ -18,10 +18,7 @@
   .intro__text{
     animation: introTextFadeIn 0.8s forwards;
     transform: translateY(-100vh);
-    @keyframes introTextFadeIn {
-      0%{transform: translateY(-100vh)}
-      100%{transform: translateY(0vh)}
-    }
+    
     color:#fff;
     text-align: center;
     .intro__text__headline{
@@ -43,5 +40,36 @@
         line-height: 1.2em;
       }
     }
+  }
+}
+
+@keyframes introTextFadeIn {
+  0%{transform: translateY(-100vh)}
+  100%{transform: translateY(0vh)}
+}
+
+.button--newsletter{
+  position: fixed;
+  right:50px;
+  background-color: $color--main;
+  border: solid 3px #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding:10px 20px;
+  border-radius: 30vw;
+  color: #fff;
+  bottom: 50px;
+  z-index: 10;
+  font-weight: bold;
+  font-size: 16px;
+  padding:10px 20px;
+  border-radius: 30vw;
+  animation: introTextFadeIn 0.8s forwards;
+  transform: translateY(-100vh);
+}
+
+.newsletter--intro{
+  @include max-sx{
+    display: none;
   }
 }

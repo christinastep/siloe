@@ -7,6 +7,8 @@
 @import "box";
 @import "engagement";
 @import "pack";
+@import "recrute";
+@import "contact";
 @import "footer";
 
 
@@ -72,5 +74,16 @@ h2{
     &:after{
       width:50%;
     }
+  }
+}
+
+.section__intro{
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  text-align: center;
+  @include max-sx{
+    font-size: 16px;
+    width:80%;
   }
 }
