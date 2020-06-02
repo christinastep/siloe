@@ -325,41 +325,10 @@ a {
       padding: 5px 10px;
       border-radius: 10px; }
 
-.contact {
-  position: fixed;
-  width: 90vw;
-  min-height: 100vh;
-  background-color: #262B35;
+.contact a {
   color: #fff;
-  z-index: 11;
-  top: 0vh;
-  right: 0vw;
-  transition: all 0.7s;
-  transform: translateY(-100%);
-  padding-top: 10vh;
-  overflow: scroll; }
-  @media (max-width: 599px) {
-    .contact {
-      width: 100%;
-      padding-top: 0; } }
-  .contact a {
-    color: #fff;
-    margin-bottom: 20px;
-    display: block; }
-  .contact h2:after {
-    background-color: #fff; }
-  .contact .contentWrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 950px; }
-    @media (max-width: 599px) {
-      .contact .contentWrapper {
-        display: block;
-        height: 100vh;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-        overflow-y: scroll; } }
+  margin-bottom: 20px;
+  display: block; }
 
 button:focus {
   outline: none; }
@@ -370,6 +339,8 @@ button:focus {
   width: 50px;
   height: 50px;
   right: 50px;
+  background-color: #262B35;
+  border: solid 2px #fff;
   border-radius: 50%; }
   @media (max-width: 599px) {
     .button--close {
@@ -445,41 +416,6 @@ button:focus {
       @media (max-width: 599px) {
         .contact--wrapper .contact--mail form {
           width: 100%; } }
-      .contact--wrapper .contact--mail form input, .contact--wrapper .contact--mail form textarea {
-        width: 100%;
-        background-color: transparent;
-        border: solid 1px #fff;
-        font-size: 17px;
-        color: #fff;
-        padding: 5px; }
-        .contact--wrapper .contact--mail form input:focus, .contact--wrapper .contact--mail form textarea:focus {
-          background-color: #fff;
-          color: #262B35; }
-      .contact--wrapper .contact--mail form ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: #fff; }
-      .contact--wrapper .contact--mail form ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: #fff; }
-      .contact--wrapper .contact--mail form :-ms-input-placeholder {
-        /* IE 10+ */
-        color: #fff; }
-      .contact--wrapper .contact--mail form :-moz-placeholder {
-        /* Firefox 18- */
-        color: #fff; }
-      .contact--wrapper .contact--mail form .button--sumbit {
-        width: auto;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        background-color: #262B35;
-        border: solid 3px #fff;
-        font-weight: bold;
-        font-size: 16px;
-        padding: 10px 20px;
-        border-radius: 30vw;
-        color: #fff;
-        bottom: 50px;
-        margin-top: 20px; }
   .contact--wrapper .contact--telephone {
     width: 30%; }
     @media (max-width: 599px) {
@@ -492,6 +428,86 @@ button:focus {
         .contact--wrapper .contact--telephone .footer__ouverture {
           text-align: left;
           width: 80%; } }
+
+input, textarea {
+  width: 100%;
+  background-color: transparent;
+  border: solid 1px #fff;
+  font-size: 17px;
+  color: #fff;
+  padding: 5px; }
+  input:focus, textarea:focus {
+    background-color: #fff;
+    color: #262B35; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
+
+.button--sumbit {
+  width: auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #262B35;
+  border: solid 3px #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30vw;
+  color: #fff;
+  bottom: 50px;
+  margin-top: 20px;
+  cursor: pointer; }
+
+.form--newsletter input {
+  margin-top: 10px;
+  border: none;
+  border-bottom: solid 1px #fff; }
+
+.form--newsletter .button--sumbit {
+  border: solid 1px #fff;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 0%;
+  transform: translateX(0%);
+  padding: 5px 10px;
+  margin-top: 10px; }
+
+.wrapper--link {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px; }
+  @media (max-width: 599px) {
+    .wrapper--link {
+      display: block; } }
+  .wrapper--link .box--link {
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #fff;
+    margin-bottom: 20px; }
+    @media (max-width: 599px) {
+      .wrapper--link .box--link {
+        width: 100%; } }
+    .wrapper--link .box--link svg {
+      width: 100%;
+      max-width: 80%;
+      max-height: 60%; }
 
 .footer {
   background-color: #262B35;
@@ -528,6 +544,9 @@ button:focus {
 
 .footer a {
   color: #ffffff; }
+
+.footer svg path:hover {
+  fill: #D7E4EE !important; }
 
 .footer__ouverture {
   display: grid;
@@ -606,3 +625,55 @@ h2 {
     .section__intro {
       font-size: 16px;
       width: 80%; } }
+
+.popUp {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #262B35;
+  color: #fff;
+  z-index: 11;
+  top: 0vh;
+  right: 0vw;
+  transition: all 0.7s;
+  transform: translateY(-100%);
+  padding-top: 10vh;
+  overflow: scroll; }
+  @media (max-width: 599px) {
+    .popUp {
+      width: 100%;
+      padding-top: 0; } }
+  .popUp .contentWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 950px; }
+    @media (max-width: 599px) {
+      .popUp .contentWrapper {
+        display: block;
+        height: 100vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        overflow-y: scroll; } }
+  .popUp h2:after {
+    background-color: #fff; }
+
+.button--link {
+  position: fixed;
+  top: 90vh;
+  right: 0;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  right: 40px;
+  background-color: #262B35;
+  border: solid 2px #fff;
+  z-index: 11;
+  border-radius: 50%; }
+  .button--link:hover {
+    background-color: #D7E4EE; }
+    .button--link:hover svg {
+      fill: #262B35; }
+  .button--link svg {
+    width: 80%;
+    fill: #fff; }

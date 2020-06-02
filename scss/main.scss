@@ -87,3 +87,69 @@ h2{
     width:80%;
   }
 }
+
+.popUp{
+  position: fixed;
+  width:100vw;
+  min-height:100vh;
+  background-color: $color--main;
+  color:#fff;
+  z-index: 11;
+  top:0vh;
+  right:0vw;
+  transition: all 0.7s;
+  transform: translateY(-100%);
+  padding-top: 10vh;
+  overflow: scroll;
+  @include max-sx{
+    width: 100%;  
+    padding-top: 0;
+  }
+  .contentWrapper{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 950px;
+    @include max-sx{
+      display: block;
+      height: 100vh;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      overflow-y: scroll;
+    }
+  }
+  h2{
+    &:after{
+      background-color: #fff;
+      // @include max-sx{
+      //   display: none; 
+      // }
+    }
+  }
+}
+
+.button--link{
+  position: fixed;
+  top: 90vh;
+  right:0;
+  width:40px;
+  cursor: pointer;
+  height:40px;
+  right:40px;
+  background-color:$color--main;
+  border: solid 2px #fff;
+  z-index: 11;
+  border-radius: 50%;
+  &:hover{
+    background-color:$color--secondary;
+    svg{
+      fill: $color--main;
+    } 
+    
+  }
+
+  svg {
+    width:80%;
+    fill:#fff;
+  }
+}

@@ -37,6 +37,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
   }
 
+  let linkButton = document.querySelector(".button--link");
+  let linkContainer = document.querySelector(".linkSection");
+  let clickCounter =0;
+
+  linkButton.addEventListener("click",function(){
+
+      console.log(clickCounter);
+    
+    if(clickCounter===0){
+      linkContainer.style.transform="translateY(0)";
+      clickCounter=1;
+      console.log("premiere click");
+    }else if(clickCounter===1){
+      linkContainer.style.transform="translateY(-100%)";
+      clickCounter=0;
+      console.log("secont click");
+    }
+  });
+
+
   if(!!window.IntersectionObserver){
 
     let options = {

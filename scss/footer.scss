@@ -46,6 +46,13 @@
   a{
     color: #ffffff;
   }
+  svg{
+    path{
+    &:hover{  
+        fill:$color--secondary !important;
+      }
+    }
+  }
 }
 
 .footer__ouverture{
