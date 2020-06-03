@@ -26,7 +26,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   for (let i = 0; i < headerLinks.length; i++) {
     const headerLink = headerLinks[i];
     headerLink.addEventListener("click",function(){
-      header.style.padding="10px 20px 10px 20px"
+      header.style.padding="10px 20px 10px 20px";
+      console.log(headerLink.getAttribute("data-link"));
+      clickCounter =0;
+      if(headerLink.getAttribute("data-link"!="contact")){
+        contactContainer.style.transform="translateY(-100%)";
+      }
+      linkContainer.style.transform="translateY(-100%)";
+      
       headerLogo.style.stroke="#000";
       header.style.backgroundColor="#fff";
       for (let i = 0; i < headerLinks.length; i++) {
